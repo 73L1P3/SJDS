@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chele</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="navbar_logo">
+                <a href="index.html">
+                    <img class="logo" alt="LOGO" src="logo2.jpg">
+                </a>
+            </div>
+            <div class="navbar_links">
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Galery</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--Scroll-->
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            document.getElementById("navbar").style.top = "-70px";
+        }
+        prevScrollpos = currentScrollPos;
+        }
+    </script>
+</body>
+</html>
