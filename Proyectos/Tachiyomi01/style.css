@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body{
+    font-family: 'Montserrat';
+    background-color: #252529;
+    margin: 0;
+    padding: 0;
+    color: dodgerblue;
+    line-height: 1.6;
+}
+
+/* Utility Class */
+.container{ 
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header{
+    height: 50px;
+    width: 100%;
+    background-color: #fff;
+    color: dodgerblue;
+    position: fixed;
+
+}
+
+
+/* Nav bar*/
+.logo{
+    float: left;
+    height: auto;
+}
+.logo img{
+    padding-top: 5px;
+}
+.logo a{
+    text-decoration: none;
+    color: #000;
+}
+
+ul{
+    float: right;
+    list-style-type: none;
+}
+
+li{
+    display: inline-block;
+}
+li:last-child a:after {
+    border-right: none;
+}
+li a{
+    text-decoration: none;
+    color: dodgerblue;
+    padding: 10px 10px 0px 10px;
+}
+li a:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 1px;
+    height: 1rem;
+    border-right: 1px solid red;
+    margin-left: 1rem;
+}
+li a span:hover{
+    color: #000;
+    border-bottom: 2px solid dodgerblue;
+}
+
+
+
+/*Show Case*/
+#showcase{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(img/wall2.png) no-repeat center/cover;
+    width: 100%;
+    height: 100vh;
+    /* position: relative; */
+    overflow-y: hidden;
+}
+
+.section-main{
+    margin-top: 25vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.section-main .group1{
+    color: yellow;
+    font-size: 1.2em;
+}
+
+.section-main .group2{
+    margin-left: auto;
+}

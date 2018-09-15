@@ -1,0 +1,285 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,900|Six+Caps");
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+/*   display: grid;
+  grid-template-columns: repeat(12, 1fr); */
+/*   grid-template-rows: repeat(4, 1fr); */
+/*   grid-template-areas: "header header header"
+   ". carrousel ."
+  " . products ." 
+  "footer footer footer" */
+}
+
+/* Navbar */
+header {
+    background: #000;
+    text-align: center;
+    position: fixed; 
+    z-index: 999;
+    width: 100%;
+}
+.logo{
+    color: #e9d20f;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;  /* I'll told him where is going to go */
+    top: 0;
+    left: 0;
+    margin-left: 1em;   /* Line up with the "a" elements */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: #fff;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: #000;
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+    color: purple;
+}
+
+.nav-toggle:checked~nav {
+    transform: scale(1, 1);
+}
+
+.nav-toggle:checked~nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+
+/* Main */
+/* main{
+    grid-column: 2/12;
+} */
+
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* Showcase */
+#showcase{
+    padding-top: 3em;
+    min-height: 450px;
+    color: #fff;
+    text-align: center;
+}
+
+#showcase .image{
+    position: absolute;
+    background: url('img/01.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    z-index: -1;
+    opacity: .85;
+}
+
+#showcase h1{
+    padding-top: 50px;
+    padding-bottom: 0;
+}
+#showcase p{
+    margin: 0;
+    padding: 1em;
+    color: #000;
+}
+
+#showcase .content-wrap {
+    padding: 0 1.5em;
+}
+
+.btn{
+    display: inline-block;
+    color: #fff;
+    background: #000;
+    text-decoration: none;
+    padding: 1em 2em;
+    border: 1px solid #000;
+    margin: 0.5em 0;
+}
+.btn:hover{
+    background: yellow;
+    color: #000;
+}
+
+/* Products */
+
+.products{
+    padding-top: 3em;
+}
+.products div{
+    background: #000;
+    color: #fff;
+}
+
+footer {
+    background: #000;
+    color: #e9d20f;
+    text-align: center;
+}
+
+
+
+
+
+/* Media */
+@media screen and (min-width: 768px){
+
+    /* Navbar */
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr minmax(600px, 10fr) 1fr;
+    }
+
+    .logo {
+        grid-column: 2 / 3;
+    }
+
+    nav {
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav li {
+        margin-left: 3em;
+        margin-bottom: 0;
+    }
+
+    nav a {
+        opacity: 1;
+        position: relative;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        background: yellow;
+        position: absolute;
+        top: -.50em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+    }
+
+    nav a:hover::before {
+        transform: scale(1, 1);
+    }
+
+    /* Showcase */
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+
+    #showcase{
+        padding-top: 3em;
+    }
+
+    #showcase .image{
+        height: 700px;
+    }
+    .content-wrap{
+        grid-column: 2/4;
+    }
+
+    /* Products */
+    .products{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .prod{
+        border: 1px solid black;
+        grid-gap: 1em;
+
+    }
+}
+
