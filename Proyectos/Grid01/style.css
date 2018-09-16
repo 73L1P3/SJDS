@@ -140,13 +140,13 @@ nav a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 644px;
+    height: 600px;
     z-index: -1;
     opacity: .85;
 }
 
 #showcase h1{
-    padding-top: 30%;
+    margin-top: 100px;
     padding-bottom: 0;
 }
 #showcase p{
@@ -175,11 +175,8 @@ nav a:hover {
 
 
 
-
-
                                                         /* Products */
 .products{
-    grid-row: 2/3;
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
     grid-template-areas: ". container ."
@@ -194,8 +191,8 @@ nav a:hover {
     grid-gap: 1em;
     margin: auto;
     height: auto;
-    background: #262626;
-}
+/*     background: #262626;
+ */}
 
 .box {
     position: relative;
@@ -303,51 +300,31 @@ nav a:hover {
     transition-delay: .2s;
 }
 
-@media (max-width: 1200px) {
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 10px;
-        width: auto;
-        background: green;
-    }
 
-    .box {
-        width: calc(350px - 30px);
-        height: calc(250px - 30px);
-        margin: 15px auto;
-    }
+                                                        /* Text */
+
+
+.txt-a{
+    background: #000;
+    color: #e9d20f;
+    padding-bottom: 2em;
+    text-align: center;
 }
 
-@media (max-width: 600px) {
-    .container {
-        display: grid;
-        grid-template-columns: 1fr;
-        padding: 10px;
-        height: auto;
-        background: blue;
-    }
-
-    .box {
-        width: calc(320px - 30px);
-        height: calc(220px - 30px);
-        margin: 15px auto;
-    }
-
-    .box .content {
-        position: absolute;
-        width: 100%;
-        top: 40%;
-        transform: translateY(-50%);
-        z-index: 2;
-        padding: 20px;
-        box-sizing: border-box;
-        text-align: center;
-    }
+.txt-a .content-wrap {
+    padding: 0 1.5em;
 }
+
+.txt-a h1, p{
+    margin: 0;
+    padding: 1em 0;
+}
+
+
+
 
 /* Media */
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px){ /* Desktop */
 
     /* Navbar */
     .nav-toggle-label {
@@ -356,7 +333,7 @@ nav a:hover {
 
     header {
         display: grid;
-        grid-template-columns: 1fr 1fr minmax(600px, 10fr) 1fr;
+        grid-template-columns: 1fr 1fr minmax(600px, 7fr) 1fr;
     }
 
     .logo {
@@ -411,12 +388,59 @@ nav a:hover {
     #showcase{
         padding-top: 3em;
     }
+    #showcase h1{
+        margin-top: 100px;
+        font-size: 3em;
+    }
 
     #showcase .image{
-        height: 700px;
+        height: 644px;
     }
     .content-wrap{
+
         grid-column: 2/4;
+    }
+
+}
+
+@media (max-width: 1200px) { /* Tablet */
+    /* Products */
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 10px;
+        width: auto;
+    }
+
+    .box {
+        width: calc(350px - 30px);
+        height: calc(250px - 30px);
+        margin: 15px auto;
     }
 }
 
+@media (max-width: 600px) { /* Smartphone */
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 10px;
+        height: auto;
+    }
+
+    .box {
+        width: calc(320px - 30px);
+        height: calc(220px - 30px);
+        margin: 15px auto;
+    }
+
+    .box .content {
+        position: absolute;
+        width: 100%;
+        top: 40%;
+        transform: translateY(-50%);
+        z-index: 2;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
