@@ -1,4 +1,5 @@
 import React from 'react';
+import './trolls.css';
 
 const SJDS = ({trolls, deleteTroll}) => {
     const trollList = trolls.map(troll => {
