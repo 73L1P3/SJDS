@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    height: 2020px;
+}
+header{
+    transition: 500ms ease;
+    height: 80px;
+    line-height: 80px;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+.scrolled{
+    background-color: #34495e;
+}
+nav{float: right;}
+
+ul{list-style: none;}
+
+li{display: inline-block;}
+
+
+li a{
+    padding-right: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all .3s ease-in;
+}
+
+li a:hover{
+    color: deepskyblue;
+    text-decoration: none;
+}
+
+
+.white{
+    color: #fff;
+}
+
+.img{
+    background: url('img/img2.jpg') no-repeat center center / cover;
+    height: 100vh;
+}
+
+.main h2{
+    padding-top: 220px;
+    margin-top: 0;
+    font-size: 6rem;
+    font-weight: bold;
+}
+.main p{
+    font-size: 2rem;
+}
+
+section .button{
+    padding-top: 15px;
+}
+
+section .btn{
+    padding: 10px 50px;
+    border: 1px solid deepskyblue;
+}
+
+section .btn-first{
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+section .btn-second{
+    background-color: deepskyblue;
+    color: #fff;
+}
+
+
+/* Our Services */
+.ourservices{
+    margin-top: 40px;
+}
+.text-section{
+    padding: 2rem;
+}
+.section-h2{
+    font-size: 4rem;
+}
+.section-p{
+    font-size: 1.5rem;
+}
+
+.ourservices h4{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.gaps{
+    margin-top: 40px;
+}
