@@ -6,7 +6,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 body{
-    height: 2020px;
+    height: 2500px;
 }
 header{
     transition: 500ms ease;
@@ -39,7 +39,6 @@ li a:hover{
     text-decoration: none;
 }
 
-
 .white{
     color: #fff;
 }
@@ -52,32 +51,39 @@ li a:hover{
 .main h2{
     padding-top: 220px;
     margin-top: 0;
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: bold;
 }
 .main p{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
-section .button{
+.main .button{
     padding-top: 15px;
 }
 
-section .btn{
+.main .btn{
     padding: 10px 50px;
     border: 1px solid deepskyblue;
 }
 
-section .btn-first{
-    background-color: #e74c3c;
+.main .btn-first{
+    background-color: #f7513f;
     color: #fff;
 }
 
-section .btn-second{
+.main .btn-second{
     background-color: deepskyblue;
     color: #fff;
 }
 
+.main .btn-first:hover{
+    background: #fa2d17;
+}
+
+.main .btn-second:hover{
+    background: #0099ff;
+}
 
 /* Our Services */
 .ourservices{
@@ -87,10 +93,10 @@ section .btn-second{
     padding: 2rem;
 }
 .section-h2{
-    font-size: 4rem;
+    font-size: 3rem;
 }
 .section-p{
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .ourservices h4{
@@ -100,4 +106,12 @@ section .btn-second{
 
 .gaps{
     margin-top: 40px;
+}
+
+
+/* Our  Works */
+
+.portfolio{
+    margin-top: 60px;
+    overflow-y: hidden;
 }
