@@ -217,3 +217,74 @@ li a:hover{
     color: white;
     transition: .3s ease;
 }
+
+
+/* Parallax */
+
+.parallax{
+    margin-top: 4rem;
+    height: 100%;
+    color: #666;
+    font-weight: 400;
+    line-height: 1.8em;
+}
+
+.parallax_img1, .parallax_img2, .parallax_img3{
+    position: relative;
+    opacity: .70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+}
+
+.parallax_img1{
+    background-image: url('img/para1.jpg');
+    min-height: 100vh;
+}
+.parallax_img2{
+    background-image: url('img/para2.jpg');
+    min-height: 400px;
+}
+.parallax_img3{
+    background-image: url('img/para3.jpg');
+    min-height: 400px;
+}
+
+.section{
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light{
+    background-color: #f4f4f4;
+    color: #666;
+}
+.section-dark{
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.ptext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .border{
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+}
+
+@media(max-width: 568px){
+    .parallax_img1, .parallax_img2, .parallax_img3{
+        background-attachment: scroll;
+    }
+}

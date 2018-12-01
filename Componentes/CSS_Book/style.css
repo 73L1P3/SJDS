@@ -1,0 +1,22 @@
+p{
+    display: inline;
+}
+
+em{
+    display: block;
+}
+
+book, maintitle, subtitle, author, isbn {display: block;}
+publisher, pubdate {display: inline;}
+
+maintitle{
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-bottom: 1px solid black;
+}
+author{
+    font-weight: bold;
+}
+isbn{
+    font-style: italic;
+}

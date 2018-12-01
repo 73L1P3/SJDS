@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="fixed-action-btn">
+        <a class="btn-floating red btn-large"><i class="material-icons large">mode_edit</i></a>
+
+        <ul>
+            <li><a class="btn-floating blue" href="#"><i class="material-icons">colorize</i></a></li>
+            <li><a class="btn-floating purple" href="#"><i class="material-icons">colorize</i></a></li>
+            <li><a class="btn-floating green" href="#"><i class="material-icons">colorize</i></a></li>
+            <li><a class="btn-floating yellow" href="#"><i class="material-icons">colorize</i></a></li>
+        </ul>
+    </div>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.fixed-action-btn');
+            var instances = M.FloatingActionButton.init(elems);
+        });</script>
+</body>
+</html>
